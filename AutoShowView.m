@@ -158,7 +158,7 @@ static BOOL shouldShowdeleBtn;
             UIView *view = self.subviews.firstObject;
             [view removeFromSuperview];
         }
-    }
+    }// 这里是因为当进入相册，点击取消选取图片后，会导致之前的多余的cell并没有被移除，而出现bug
         for (int i = 0 ; i < _datas.count; i++) {
             AutoShowViewCell *cell = nil;
             if (_datas.count != self.subviews.count){
